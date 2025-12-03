@@ -53,7 +53,7 @@ public class PaymentServiceTest {
 
         String view = paymentService.createOrder(payment, model);
 
-        assertEquals("index", view);
+        assertEquals("error", view);
         assertNotNull(model.getAttribute("status"));
     }
 }

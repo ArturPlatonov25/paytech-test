@@ -19,7 +19,7 @@ public class PaymentService {
             return "redirect:" + orderDto.getResult().getRedirectUrl();
         } catch (FeignException e) {
             model.addAttribute("status", e.status());
-            return "index";
+            return "error";
         }
     }
 
