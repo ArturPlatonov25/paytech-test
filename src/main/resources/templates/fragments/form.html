@@ -1,0 +1,14 @@
+<div th:fragment="paymentAmount(formAction, paymentDto)">
+    <form th:action="@{${formAction}}" th:object="${paymentDto}" method="post">
+        <label>
+            <input type="number" min="0.01" step="0.01" th:field="*{amount}" required>
+        </label>
+        <label>
+            <span th:text="#{currency}">Currency</span>:
+            <select th:field="*{currency}" required>
+                <option th:each="c : ${currencies}" th:value="${c}" th:text="${c}"></option>
+            </select>
+        </label>
+        <button type="submit" th:text="#{submit.button}">Submit</button>
+    </form>
+</div>

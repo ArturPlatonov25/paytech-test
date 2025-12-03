@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: test
+payment:
+  api:
+    url: ${PAYMENT_API_URL:https://engine-sandbox.pay.tech/api/v1/payments}
+    token: ${PAYMENT_API_TOKEN:test}

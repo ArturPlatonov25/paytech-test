@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<h1 th:text="#{hello.message}">Placeholder</h1>
+
+<div th:replace="~{fragments/form :: paymentAmount(${formAction}, ${paymentDto})}"></div>
+
+<p th:if="${status != null}">
+    <span th:text="#{error}">Something went wrong</span>: <span th:text="${status}"></span>
+</p>
+
+</body>
+</html>
